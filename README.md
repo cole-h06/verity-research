@@ -1,4 +1,4 @@
-Verity
+# Verity
 
 A source reliability system for e-commerce product data.
 
