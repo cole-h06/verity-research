@@ -8,11 +8,7 @@ Product specs conflict across retailers, manufacturers, and government sites. So
 
 # The Core Challenge
 
-To score a claim's reliability you need to know the source's reliability. But to know the source's reliability, you need to know how accurate its claims are. It's circular.
-
-# The Approach
-
-Model sources and claims as a bipartite graph. Treat reliability scoring as an iterative convergence problem where source reliability scores and claim reliability scores solve each other simultaneously until they stabilize.
+Sources and claims have a dependency relationship: a source's reliability depends on the accuracy of its claims, and a claim's accuracy depends on the reliability of its sources.
 
 # Stack
 
