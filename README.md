@@ -1,6 +1,6 @@
 # Project Verity
 
-A source credibility system for e-commerce product data.
+A source credibility system for e-commerce product specifications.
 
 # The Problem
 
