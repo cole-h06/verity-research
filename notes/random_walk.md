@@ -31,7 +31,7 @@ I'm not fully sure yet whether revisit frequency meaningfully corresponds to cre
 
 Also, it is important to note that agreement clearly does not imply independence.
 
-If many sources are all indirectly copying the same upstream information, the graph can appear highly confident with a lack of independent verification. In that case, naive majority voting feels misleading.
+If many sources are all indirectly copying the same upstream information, the graph can appear highly confident with a lack of independent verification. In such a case, naive majority voting feels misleading.
 
 Right now I'm experimenting with recursive update ideas like:
 
@@ -45,7 +45,7 @@ w_i^{(t+1)} \propto \sum_j c_j A_{ij}
 
 where claims reinforce sources and sources reinforce claims.
 
-Another thing I'm wondering about is whether the walk can get trapped in closed credibility loops.
+Another thought is the fact the walk can get trapped in closed credibility loops.
 
 Maybe introducing a small random jump probability helps prevent this to ensure distribution:
 
