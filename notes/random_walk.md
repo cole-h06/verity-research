@@ -4,8 +4,6 @@ Can credibility emerge naturally from repeated movement across a graph of source
 
 Suppose a source supports one or more claims. Those claims are also supported by other sources, which then support other claims, and so on.
 
-So instead of trying to identify a single "root" source of truth, maybe the more interesting question is:
-
 What parts of the network does the process keep returning to over time?
 
 The structure can be represented as a bipartite graph:
