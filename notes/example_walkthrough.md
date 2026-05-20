@@ -34,6 +34,8 @@ If multiple independent sources support claim 892, the graph may repeatedly revi
 
 However, agreement alone does not necessarily imply independence.
 
+![Dependency Propagation](../images/dependency_propagation.png)
+
 If several sources inherit the same upstream specification, reinforcement may emerge from correlated structure rather than truly independent verification.
 
 This is one reason the graph topology itself may contain important credibility signals.
