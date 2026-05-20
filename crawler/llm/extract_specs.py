@@ -316,6 +316,8 @@ OUTPUT FORMAT:
     except Exception:
         return []
 
+# preserve original display values while still converging numeric
+# claims into a consistent comparison space.
 def normalize_specs(raw_claims, category):
     standards = CATEGORY_STANDARDS.get(category, {})
 
@@ -385,6 +387,8 @@ def normalize_specs(raw_claims, category):
         final_unit = unit
 
         if isinstance(base_value, dict):
+            # convert equivalent measurements into the category
+            # standard unit so agreement compares like-for-like values.
             if target_unit and unit != target_unit:
                 key = f"{unit}_to_{target_unit}"
                 factor = CONVERSIONS.get(key)
@@ -434,6 +438,9 @@ def normalize_specs(raw_claims, category):
 
     return normalized
 
+# main extraction pipeline.
+# structured retailer specs get priority before falling back to
+# broader markdown extraction.
 def process_product(
     product_json,
     markdown,
@@ -520,6 +527,8 @@ def process_product(
 
             measurement_match = None
 
+            # some retailer payloads expose partial units separately
+            # from values, so rebuild lightweight measurements first.
             if heuristic_mode:
 
                 measurement_match = re.search(
@@ -574,6 +583,8 @@ def process_product(
 
             if math_val is None:
 
+                # avoid collapsing dimension strings into a single
+                # scalar measurement during heuristic parsing.
                 if re.search(r"\d+\s*x\s*\d+", display.lower()):
                     pass
 
