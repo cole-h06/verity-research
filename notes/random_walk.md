@@ -45,9 +45,9 @@ w_i^{(t+1)} \propto \sum_j c_j A_{ij}
 
 where claims reinforce sources and sources reinforce claims.
 
-Another thought is the fact the walk can get trapped in closed credibility loops.
+Another problem is the walk can get trapped in closed credibility loops which risks artificially inflating perceived credibility.
 
-Maybe introducing a small random jump probability helps prevent this to ensure distribution:
+Maybe introducing a small random jump probability helps prevent this to ensure distribution despite this:
 
 \[
 P' = \alpha P + (1-\alpha)U
