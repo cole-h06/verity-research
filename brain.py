@@ -9,6 +9,9 @@ client = OpenAI()
 
 CACHE_FILE = "unit_map_cache.json"
 
+# these are the specs that stayed consistently extractable across
+# retailers after normalization/semantic mapping.
+# generic retailer labels were too unstable for agreement scoring.
 PILLARS = {
     "laptops": ["cpu_model", "ram_gb", "storage_gb", "weight_lb", "screen_brightness_nit", "display_resolution", "battery_life_hr"],
     "headphones": ["driver_type", "frequency_response_hz", "battery_life_hr", "impedance_ohms", "noise_cancellation"],
@@ -48,12 +51,16 @@ def normalize_unit_key(text):
     text = re.sub(r"[^\w\s]", "", text)
     return text.strip()
 
+# retailers serialize units differently ("cu ft", "cu. ft.", "cubic feet"),
+# so normalize obvious variants before calling the model again.
 def get_standard_unit(raw_unit_word, field_name=None):
     if not raw_unit_word:
         return None
 
     word = normalize_unit_key(raw_unit_word)
 
+    # fast path for the high-frequency retailer unit variants
+    # before falling back to model-based normalization.
     fast = normalize_unit(word)
     if fast and fast != "text":
         UNIT_MAP[word] = fast
@@ -78,6 +85,9 @@ def get_standard_unit(raw_unit_word, field_name=None):
 def normalize_keys(keys: list[str]):
     if not keys:
         return {}
+
+    # small wording changes here noticeably changed canonicalization behavior
+    # across categories, so the prompt stays intentionally rigid.
 
     system_prompt = """
 You are a strict key normalizer.
@@ -118,6 +128,8 @@ OUTPUT FORMAT:
     except Exception:
         return {}
 
+# reuse previously observed attribute-unit relationships so the
+# crawler converges toward stable canonical units over time.
 def get_existing_unit_map(category):
     rows = get_existing_attributes_for_category(category)
 
@@ -132,6 +144,8 @@ def get_existing_unit_map(category):
 
     return unit_map
 
+# stable attribute keys matter because agreement scoring happens
+# at the normalized attribute level across independent sources.
 def normalize_key(key):
     key = key.lower().strip()
     key = re.sub(r"[^\w\s]", "", key)
@@ -146,6 +160,8 @@ def normalize_value(value):
 def normalize_claim(attr, value):
     return normalize_key(attr), normalize_value(value)
 
+# marketplace placeholders and empty retailer values were polluting
+# downstream agreement calculations if left unfiltered.
 def process_claims(claims):
     results = {}
 
@@ -163,6 +179,9 @@ def process_claims(claims):
 
     return [(k, v) for k, v in results.items()]
 
+# earlier fuzzy merges collapsed unrelated attributes together,
+# especially around dimensions, capacity, and power specs.
+# I have mostly patched this, but it is still inconsistent.
 def merge_similar_keys(new_key, existing_keys, category=None, threshold=96):
 
     new_key = normalize_key(new_key)
