@@ -302,12 +302,6 @@ async def run_miner(url, category):
             combined_specs
         )
 
-                name = p.get("name")
-                value = p.get("value")
-
-                if name and value:
-                    combined_specs.append((name, value))
-
         print("\n=== DEBUG: BEFORE process_product ===")
         print("combined_specs len:", len(combined_specs))
         print("markdown len:", len(markdown) if markdown else 0)
