@@ -10,7 +10,7 @@ while another source asserts:
 
 - screen_brightness_nits = 250 nits
 
-Instead of treating these values as isolated rows, the system represents them as graph claims.
+These values are not merely isolated rows, they can be represented as graph claims.
 
 Each source forms an edge to the claim it asserts:
 
