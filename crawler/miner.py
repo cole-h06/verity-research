@@ -289,7 +289,7 @@ async def run_miner(url, category):
         spec_payloads = crawl_result["spec_payloads"]
         domain = crawl_result["domain"]
 
-        print("markdown:", len(markdown))
+        print("markdown chars:", len(markdown))
 
         extracted_specs = extract_home_depot_specs(
             spec_payloads
@@ -365,11 +365,7 @@ async def run_miner(url, category):
                 for name, value in combined_specs
             ] if combined_specs else None
 
-            print(
-                "process_product:",
-                len(combined_specs),
-                len(structured_input or [])
-            )
+            print("processing", len(combined_specs), "specs")
 
             structured = process_product(
                 product_json=product,
@@ -445,12 +441,7 @@ async def run_miner(url, category):
         gtin = resolution["gtin"]
         model = resolution["model"]
 
-        print(
-            "identity:",
-            gtin,
-            model,
-            sku
-        )
+        print("resolved:", gtin, model)
 
         if gtin and model:
             conn.execute("""
@@ -526,12 +517,8 @@ async def run_miner(url, category):
             print("search bridge gtin:", gtin)
             print("\n=== TRIGGER SEARCH BRIDGE ===")
 
-        print("\n" + "="*80)
-        print(f"[MINER COMPLETE] {url}")
-        print(f"[FINAL GTIN] {gtin}")
-        print(f"[FINAL MODEL] {model}")
-        print(f"[CLAIMS INSERTED] {len(structured)}")
-        print("="*80)
+        print("\nfinished:", url)
+        print("claims:", len(structured))
 
         if identity_mode and (gtin or model) and not rebuild_mode:
             return run_second_pass_discovery(
