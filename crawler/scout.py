@@ -113,7 +113,7 @@ async def run_scout():
             print(f"Skipping {category} ({existing})")
             continue
 
-        print(f"Category: {category}")
+        print("category:", category)
         total_collected = set()
         target_per_seed = max(1, 50 // len(seed_urls))
 
@@ -127,7 +127,7 @@ async def run_scout():
             if seed_url in global_visited_pages:
                 continue
 
-            print(f"Processing Seed: {seed_url}")
+            print("seed:", seed_url)
             seed_brand = None
 
             match = re.search(r'brand_facet=Brand%7E([^&]+)', seed_url)
@@ -140,8 +140,8 @@ async def run_scout():
                         seed_brand = part.replace("-", " ")
                         break
             
-            print(f"[SEED BRAND]: {seed_brand}")
-            print(f"[TARGET PER SEED]: {target_per_seed}")
+            print("seed brand:", seed_brand)
+            print("target:", target_per_seed)
 
             config = retailer_config(seed_url)
             if not config:
@@ -264,13 +264,13 @@ async def run_scout():
                             href = urljoin(current_url, href)
                             if href not in visited_pages:
                                 queue.append(href)
-                                print(f"Queued next page: {href}")
+                                print("next page:", href)
 
                 conn.commit()
                 await asyncio.sleep(random.uniform(10, 25))
 
             if len(total_collected) == before_count:
-                print(f"Seed exhausted: {seed_url}")
+                print("seed exhausted")
 
     conn.close()
     print("SCOUT FINISHED")
