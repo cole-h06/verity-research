@@ -151,17 +151,10 @@ def add_additional_properties(product, combined_specs):
 
 
 def strip_identity_claims(structured):
+    filtered = []
 
     for attr, data in structured:
-        if attr in {
-            "gtin",
-            "model",
-            "sku",
-            "mpn",
-            "upc",
-            "dpci",
-            "model_number"
-        }:
+        if attr in IDENTITY_FIELDS:
             print(f"[POST-FILTER REMOVED] {attr}: {data}")
             continue
 
@@ -230,7 +223,7 @@ async def run_miner(url, category):
         and need_identity
     )
 
-    print("[IDENTITY]", existing_gtin, existing_model)
+    print("existing:", existing_gtin, existing_model)
     recrawl = (
         need_identity
         or rebuild_specs
@@ -297,7 +290,6 @@ async def run_miner(url, category):
         domain = crawl_result["domain"]
 
         print("markdown:", len(markdown))
-        print(len(markdown))
 
         extracted_specs = extract_home_depot_specs(
             spec_payloads
@@ -305,7 +297,6 @@ async def run_miner(url, category):
 
         if extracted_specs:
             print("api specs:", extracted_specs[:10])
-            print(extracted_specs[:10])
 
         product_data = extract_product_data(
             html=html,
@@ -332,7 +323,7 @@ async def run_miner(url, category):
             "dpci": None
         }
 
-        result = enrich_identity(
+        identity_result = enrich_identity(
             identity=identity,
             html=html,
             markdown=markdown,
@@ -342,8 +333,8 @@ async def run_miner(url, category):
             domain=domain
         )
 
-        identity = result["identity"]
-        combined_specs = result["combined_specs"]
+        identity = identity_result["identity"]
+        combined_specs = identity_result["combined_specs"]
 
         if not identity["gtin"]:
             identity["gtin"] = get_gtin(
@@ -470,7 +461,7 @@ async def run_miner(url, category):
 
             print(f"[PRODUCT GTIN BACKFILL] {model} → {gtin}")
 
-        print(f"[UNRESOLVED CHECK] gtin={gtin} model={model} sku={sku}")
+        print("unresolved:", gtin, model, sku)
 
         unresolved_result = attempt_unresolved_resolution(
             conn=conn,
@@ -532,7 +523,7 @@ async def run_miner(url, category):
         )
 
         if identity_mode and not rebuild_mode:
-            print("[GTIN BEFORE SEARCH BRIDGE]:", gtin)
+            print("search bridge gtin:", gtin)
             print("\n=== TRIGGER SEARCH BRIDGE ===")
 
         print("\n" + "="*80)
