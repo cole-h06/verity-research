@@ -49,6 +49,18 @@ from identity.model_matching import (
     is_valid_model
 )
 
+MIN_CLAIMS = 10
+
+IDENTITY_FIELDS = {
+    "gtin",
+    "model",
+    "sku",
+    "mpn",
+    "upc",
+    "dpci",
+    "model_number"
+}
+
 
 def get_existing_product(conn, url):
     page_row = conn.execute("""
@@ -111,13 +123,14 @@ def get_existing_product(conn, url):
     )
 
 
-def find_gtin_in_specs(combined_specs):
+def get_gtin(combined_specs):
     for name, value in combined_specs:
-        k = str(name).lower()
-        val = str(value).strip()
+        if str(name).lower() not in {"gtin", "upc"}:
+            continue
 
-        if k in ["gtin", "upc"]:
-            if val.isdigit() and 12 <= len(val) <= 14:
+        value = str(value).strip()
+
+        if value.isdigit() and 12 <= len(value) <= 14:
                 print(f"[FINAL GTIN] {val}")
                 return val
 
@@ -205,8 +218,6 @@ async def run_miner(url, category):
         product_id
     )
 
-    MIN_CLAIMS = 10
-
     rebuild_specs = (
         claim_count < MIN_CLAIMS
     )
@@ -219,10 +230,7 @@ async def run_miner(url, category):
         and need_identity
     )
 
-    print("\n=== IDENTITY CHECK ===")
-    print("existing_gtin:", existing_gtin)
-    print("existing_model:", existing_model)
-    print("need_identity:", need_identity)
+    print("[IDENTITY]", existing_gtin, existing_model)
     recrawl = (
         need_identity
         or rebuild_specs
@@ -320,7 +328,7 @@ async def run_miner(url, category):
             "dpci": None
         }
 
-        identity_result = enrich_identity(
+        result = enrich_identity(
             identity=identity,
             html=html,
             markdown=markdown,
@@ -330,8 +338,8 @@ async def run_miner(url, category):
             domain=domain
         )
 
-        identity = identity_result["identity"]
-        combined_specs = identity_result["combined_specs"]
+        identity = result["identity"]
+        combined_specs = result["combined_specs"]
 
         if not identity["gtin"]:
             identity["gtin"] = find_gtin_in_specs(
