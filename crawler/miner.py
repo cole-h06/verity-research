@@ -151,7 +151,6 @@ def add_additional_properties(product, combined_specs):
 
 
 def strip_identity_claims(structured):
-    filtered = []
 
     for attr, data in structured:
         if attr in {
