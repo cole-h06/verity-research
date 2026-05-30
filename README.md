@@ -21,7 +21,7 @@ Sources and claims form a bipartite graph. Each edge represents a source asserti
 </p>
 
 <p align="center">
-  <em>Sources (red) assert claims (blue). Each edge represents one assertion.</em>
+  <em>Claims (blue) are asserted by sources (red). Each edge represents one assertion.</em>
 </p>
 The idea is to see whether credibility can emerge naturally through repeated movement across the graph.
 
