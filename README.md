@@ -29,6 +29,8 @@ The idea is to see whether credibility can emerge naturally through repeated mov
 
 You can think of it as a verifier traveling at random: starting on one source then moving to the set of claims it asserts, then from those claims to it's other supporting sources, over and over again. Sources that consistently connect to credible claims will get revisited more often. Claims supported by credible sources also get revisited more often.
 
+However, the underlying framework is not specific to e-commerce. Any domain involving sources, claims, and disagreement can potentially be modeled using the same graph structure.
+
 # Stack
 
 - Python (crawler + scraper)
