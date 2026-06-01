@@ -1,6 +1,6 @@
 # Project Verity
 
-A graph-based credibility inference system for conflicting e-commerce product specifications.
+A graph-based credibility inference system for networks of conflicting claims without external ground truth.
 
 # Problem
 
