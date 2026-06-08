@@ -37,7 +37,7 @@ The current implementation focuses on product specifications as an initial testb
 - SQLite (data storage)
 
 # Current Status of Verity
- (As of June 8th, 2026)
+ (As of June 8, 2026)
 
 - Prototype in development
   
