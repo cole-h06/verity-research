@@ -105,11 +105,3 @@ This suggests that naive degree normalization may distort the propagation proces
 * Why do bjs.com and cosori.com dominate after normalization?
 * Can degree effects be controlled without collapsing credibility into a small number of sources?
 * Is there a normalization scheme that preserves stability while reducing degree bias?
-
-## Conclusion
-
-The initial propagation model appears substantially more stable than the naive degree-normalized variant tested here.
-
-While I think degree bias remains an open concern, simple source-degree normalization produced highly concentrated rankings and increased sensitivity to initialization.
-
-Additional normalization strategies will be required before drawing conclusions about the role of source degree in the credibility propagation process.
