@@ -1,12 +1,10 @@
 # Project Verity
 
-A graph-based credibility inference system for networks of conflicting claims.
-
-As AI systems make decisions and complete tasks autonomously using information gathered from across the web, evaluating the credibility of information becomes increasingly important.
+A graph-based credibility inference system for networks of conflicting claims. Verity models the relationship between sources and claims as a graph to estimate the credibility of every source and the confidence of every claim it asserts.
 
 # Problem
 
-When sources disagree, deciding which information to trust is difficult. Verity models the relationship between sources and claims as a graph to estimate the credibility of every source and the confidence of every claim it asserts.
+As AI systems make decisions and complete tasks autonomously using information gathered from across the web, evaluating the credibility of information becomes increasingly important.
 
 # Core Challenge
 
