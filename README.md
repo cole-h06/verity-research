@@ -19,11 +19,11 @@ A claim becomes credible if it is supported by credible sources.
 
 Sources and claims form a bipartite graph. Each edge represents a source asserting a claim. Verity treats information as a network rather than a collection of independent observations.
 <p align="center">
-  <img src="images/source_claim_graph.png" width="520">
+  <img src="images/credibility_animation.gif" width="520">
 </p>
 
 <p align="center">
-  <em>Claims (blue) are asserted by sources (red). Each edge represents one assertion.</em>
+  <em>An animation of credibility propagation running on a small network of sources and claims. Node size represents inferred credibility, while edges represent assertions. As credibility flows through the graph, sources and claims reinforce or weaken one another until the network converges to a stable ranking.</em>
 </p>
 The idea is to see whether credibility can emerge naturally through repeated movement across the graph.
 
