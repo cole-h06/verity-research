@@ -31,8 +31,8 @@ The current implementation focuses on product specifications as an initial testb
 
 # Stack
 
-- Python (crawler + scraper)
-- SQLite (data storage)
+- Python
+- SQLite
 
 ## Current Status of Verity
 
