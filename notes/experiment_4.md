@@ -64,9 +64,9 @@ Ran two initializations:
 
 *Early iterations under random initialization begin from a different starting distribution.*
 
-Random converged after 94 iterations.
-
 ![Random convergence](../images/exp4_random_convergence.png)
+
+Random converged after 94 iterations.
 
 Final difference between solutions:
 
