@@ -136,7 +136,7 @@ Top sources:
 
 ## Current observations
 
-The algorithm produces much more reasonable results than earlier experiments. The remaining limitation is likely graph density, not convergence.
+The remaining limitation is likely graph density, not convergence.
 
 Most claims are still asserted by only a single source:
 
