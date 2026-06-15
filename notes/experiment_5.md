@@ -136,7 +136,7 @@ Top sources:
 
 ## Current observations
 
-The algorithm now appears to behave much more reasonably than in earlier experiments. The remaining limitation is not convergence, but graph density.
+The algorithm produces much more reasonable results than earlier experiments. The remaining limitation is likely graph density, not convergence.
 
 Most claims are still asserted by only a single source:
 
@@ -144,8 +144,6 @@ $$
 \text{Average sources per claim} \approx 1.09
 $$
 
-This means the graph contains relatively little agreement information for credibility propagation.
+This means the graph still contains little agreement information for credibility propagation.
 
-Improving product matching and claim canonicalization will likely have a larger impact than further changes to the propagation algorithm itself.
-
-The current results implies that the propagation scheme is no longer the primary problem. I believe increasing overlap between sources may provide the largest improvement going forward in future experiments.
+Improving product matching and claim canonicalization will probably have a larger impact than further changes to the propagation algorithm itself. I believe increasing overlap between sources may be the largest improvement going forward in future experiments.
