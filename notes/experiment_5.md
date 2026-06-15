@@ -134,7 +134,7 @@ Top sources:
 
 ![Final rankings](../images/exp5_final_rankings.png)
 
-*Bidirectional normalization produced substantially more balanced source rankings than previous experiments.*
+*Bidirectional normalization produced much more balanced source rankings than previous experiments.*
 
 ## Current observations
 
