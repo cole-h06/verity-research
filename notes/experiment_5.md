@@ -146,4 +146,4 @@ $$
 
 This means the graph still contains little agreement information for credibility propagation.
 
-Improving product matching and claim canonicalization will probably have a larger impact than further changes to the propagation algorithm itself. I believe increasing overlap between sources may be the largest improvement going forward in future experiments.
+Improving product matching and claim canonicalization will probably have a more noticeable impact than further changes to the propagation algorithm itself. Increasing overlap between sources may be the largest improvement going forward in future experiments.
