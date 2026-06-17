@@ -4,8 +4,8 @@ The following is an example of conflicting source assertions for the same produc
 
 Product:
 
-Lenovo Slim 3 Chromebook
-Product ID: 196803504613
+* Lenovo Slim 3 Chromebook
+* Product ID: 196803504613
 
 Canonical claim:
 
