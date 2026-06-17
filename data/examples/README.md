@@ -1,11 +1,11 @@
 # CPU Core Disagreement Example
 
-This example demonstrates conflicting source assertions for the same product attribute.
+The following is an example of conflicting source assertions for the same product attribute.
 
 Product:
 
-* Lenovo Slim 3 Chromebook
-* Product ID: 196803504613
+Lenovo Slim 3 Chromebook
+Product ID: 196803504613
 
 Canonical claim:
 
@@ -26,7 +26,7 @@ walmart.com      -> cpu_cores = 2
 
 Files:
 
-* `product.csv` - product metadata
-* `claims.csv` - canonical claims
-* `source_claims.csv` - source-specific assertions
-* `assertions.csv` - bipartite graph edges
+* `product.csv` — product metadata
+* `claims.csv` — canonical claims
+* `source_claims.csv` — source-specific assertions
+* `assertions.csv` — bipartite graph edges
