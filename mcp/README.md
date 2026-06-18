@@ -2,7 +2,10 @@
 
 Experimental MCP server for querying the Verity credibility graph.
 
-In a redefining technological shift of AI systems increasingly generating and consuming information, the problem shifts from information retrieval to information verification. 
+Search helped humans find information.
+
+AI systems face a different challenge:
+determining which information to trust.
 
 Verity exposes an experimental MCP server that allows AI agents
 to query source credibility and claim support.
