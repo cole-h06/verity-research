@@ -124,17 +124,9 @@ A source whose claims are entirely unique becomes disconnected from the rest of 
 
 The verifier can no longer travel between that source and the larger network.
 
-The current system therefore appears to measure:
+The current system therefore appears to measure: connectedness rather than:
 
-```text
-connectedness
-```
-
-rather than:
-
-```text
-truth
-```
+truth.
 
 This raises another important point.
 
