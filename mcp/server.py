@@ -4,9 +4,6 @@
 #
 # The goal is to expose the credibility graph to AI agents.
 #
-# Current dataset:
-# e-commerce product specifications
-#
 # Long-term goal:
 # domain-agnostic source credibility infrastructure.
 
