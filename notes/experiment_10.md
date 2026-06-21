@@ -1,0 +1,41 @@
+# Experiment 10 - Synthetic (Controlled) Agreement Graph
+
+## Question
+
+Experiment 9 revealed that increasing agreement weighting changed the order of credibility rankings by only small amounts.
+
+Did we under-weight the agreement mechanism, or was the graph simply too sparse to support agreement properly?
+
+## Synthetic Graph
+
+```text
+A -> X
+
+B -> X
+
+C -> Y
+```
+
+Agreement Scores
+
+X = 1.00
+
+Y = 0.50
+
+Result:
+
+A 0.50
+
+B 0.50
+
+C 0.00
+
+## Observation
+
+The final credibility rankings were affected significantly by the agreement mechanism.
+
+The sources attached to the fully agreed claim dominated the graph, whereas the source attached to the partially agreed claim collapsed toward zero.
+
+## Conclusion
+
+This shows that the agreement mechanism can significantly contribute to overall credibility and the effects witnessed in Experiment 9 were almost certainly due to graph sparseness.
