@@ -33,7 +33,7 @@ One way you can think of it is a verifier traveling through the network at rando
 
 The current implementation focuses on product specifications as initial training data. However, the underlying framework is not specific to e-commerce. Any domain involving sources, claims, and disagreement can potentially be modeled using the same graph structure.
 
-# Content-Blind Core 
+# Content-Agnostic Core
 
 Verity does not interpret the strings or meaning of claims.
 
