@@ -24,8 +24,9 @@ DB = os.path.join(
 #
 # We intentionally reuse the same attributes
 # and canonicalization pipeline as
-# simulate_graph.py so both experiments are
-# operating on identical data.
+# simulate_graph.py.
+# Now both experiments are operating 
+# on identical data.
 def load_claims():
 
     print()
