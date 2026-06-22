@@ -1,4 +1,4 @@
-# Experiment 9 - Agreement Weighted Propagation
+# Experiment 8 - Agreement Weighted Propagation
 
 Date: June 20, 2026
 
