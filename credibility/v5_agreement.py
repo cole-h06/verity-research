@@ -278,9 +278,9 @@ def agreement_distribution(results):
 # - real disagreement
 # - normalization issues
 # - extraction mistakes
-# - unit conversion problems
+# - unit conversion problems etc.
 #
-# This is mainly a debugging tool.
+# Mainly added this to serve as a debugging tool
 def print_examples(results):
 
     print()
