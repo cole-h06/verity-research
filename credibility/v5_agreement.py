@@ -6,7 +6,7 @@ import sqlite3
 from collections import Counter
 from collections import defaultdict
 
-from simulate_graph import (
+from canonical_graph import (
     GRAPH_ATTRIBUTES,
     canonicalize
 )
@@ -19,7 +19,7 @@ DB = os.path.join(
 )
 
 
-# Pull the subset of source claims that
+# Load the subset of source claims that
 # participate in the Verity graph
 #
 # We intentionally reuse the same attributes
