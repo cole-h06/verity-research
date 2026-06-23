@@ -111,7 +111,7 @@ def load_claims():
 
     return rows
 
-# Turn normalized source assertions
+# Turn normalized source claims
 # into claim nodes and source -> claim
 # connections
 def build_graph(rows):
@@ -181,7 +181,7 @@ def build_graph(rows):
         skipped_examples
     )
 
-# Count how many sources support
+# Count how many sources assert
 # each claim
 def support_breakdown(
     claim_to_sources
