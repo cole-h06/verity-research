@@ -20,13 +20,13 @@ DB = os.path.join(
 
 
 # Pull the subset of source assertions that
-# participate in the Verity graph.
+# participate in the Verity graph
 #
 # We intentionally reuse the same attributes
 # and canonicalization pipeline as
-# simulate_graph.py.
-# Now both experiments are operating 
-# on identical data.
+# simulate_graph.py
+# That way we have both experiments operating 
+# on identical data
 def load_claims():
 
     print()
@@ -65,11 +65,11 @@ def load_claims():
 # We group assertions by: (product_id, attribute)
 #
 # This is the architecture currently
-# being explored for Verity.
+# being explored for Verity
 #
 # Sources discussing the same product
 # attribute land in the same bucket even if
-# they disagree on the final value.
+# they disagree on the final value
 #
 # Example:
 #
@@ -81,7 +81,7 @@ def load_claims():
 # Target     -> 5.2
 #
 # All three assertions belong to the same
-# property group.
+# property group
 def build_property_groups(rows):
 
     groups = defaultdict(list)
@@ -137,7 +137,7 @@ def build_property_groups(rows):
 
 
 # Measure agreement within each
-# (product, attribute) bucket.
+# (product, attribute) bucket
 #
 # Agreement is currently defined as:
 #
@@ -158,7 +158,7 @@ def build_property_groups(rows):
 #
 # At this stage we are only measuring the
 # structure of agreement. Source credibility
-# is not yet involved.
+# is not yet involved
 def calculate_agreement(groups):
 
     results = []
@@ -215,8 +215,8 @@ def calculate_agreement(groups):
     )
 
 
-# High-level summary of how much
-# agreement exists in the graph.
+# A conceptual summary of how much
+# agreement exists in the graph
 def print_summary(
     results,
     perfect,
@@ -284,12 +284,8 @@ def agreement_distribution(results):
 def print_examples(results):
 
     print()
-    print(
-        "agreement examples"
-    )
-    print(
-        "------------------"
-    )
+    print("agreement examples")
+    print("------------------")
 
     shown = 0
 
