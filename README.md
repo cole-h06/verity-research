@@ -63,21 +63,21 @@ It only sees that multiple sources asserted the same claim identifier and comput
 
 ## Dataset
 
-24 sources
-2,976 source claims
-1,662 canonical claims
+- 24 sources
+- 2,976 source claims
+- 1,662 canonical claims
 
 ## Recent Progress
 
-Built the first canonical graph
-Measured source overlap
-Measured agreement between sources
-Reduced claim fragmentation through normalization
-Identified remaining data quality issues
+- Built the first canonical graph
+- Measured source overlap
+- Measured agreement between sources
+- Reduced claim fragmentation through normalization
+- Identified remaining data quality issues
 
 ## Open Questions
 
-How should agreement affect credibility?
-How should disagreement affect credibility?
-How should source copying be handled?
-How much overlap is enough?
+- How should agreement affect credibility?
+- How should disagreement affect credibility?
+- How should source copying be handled?
+- How much overlap is enough?
