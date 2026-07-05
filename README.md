@@ -42,21 +42,21 @@ For example, a client application may determine that the following values are al
 ```text
 Product specifications
 
-Bluetooth 5.3
-BT 5.3
-Version 5.3
+- Bluetooth 5.3
+- BT 5.3
+- Version 5.3
 
 AI coding agents
 
-Python 3.12
-Python 3.12.0
-Python v3.12
+- Python 3.12
+- Python 3.12.0
+- Python v3.12
 
 Medical knowledge
 
-Myocardial infarction
-Heart attack
-Acute MI
+- Myocardial infarction
+- Heart attack
+- Acute MI
 ```
 
 # Stack
