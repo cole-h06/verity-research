@@ -9,11 +9,8 @@ determining which information to trust.
 The current implementation focuses on e-commerce product specifications as a
 real-world testing ground but the interface itself is domain agnostic.
 
-Current dataset:
-e-commerce product specifications.
-
 Long-term goal:
-build trust infrastructure for how AI systems evaluate information.
+build trust infrastructure for how AI systems evaluate and verify information.
 
 Example tools:
 
