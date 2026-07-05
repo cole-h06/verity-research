@@ -31,13 +31,11 @@ The idea is to see whether credibility can emerge naturally through repeated mov
 
 One way you can think of it is a verifier traveling through the network at random: starting on one source then moving to the set of claims it asserts, then from those claims to its other supporting sources, over and over again. Sources that consistently connect to credible claims will get revisited more often. Claims supported by credible sources also get revisited more often.
 
-The current implementation focuses on product specifications as initial training data. However, the underlying framework is not specific to e-commerce. Any domain involving sources, claims, and disagreement can potentially be modeled using the same graph structure.
-
 # Content-Agnostic Core
 
-Verity does not interpret the strings or meaning of claims.
+Verity does not interpret the strings or meaning of claims. The current implementation uses product specifications as a development dataset because they provide large-scale conflicting information from independent sources. In production, clients supply their own credibility graphs from any domain.
 
-Instead, the engine operates purely on the graph structure, receiving source identifiers, claim identifiers, and the assertion relationships between them. This means the claim data has already been parsed, normalized, deduplicated, canonicalized, and otherwise pre-processed prior to being input to the graph. 
+Verity operates purely on the graph structure to compute credibility, receiving source identifiers, claim identifiers, and the assertion relationships between them. This means the graph has already been parsed, normalized, deduplicated, canonicalized, and otherwise pre-processed prior to being input to the system. 
 
 For example, a client application may determine that:
 
