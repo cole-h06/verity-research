@@ -56,7 +56,7 @@ It only sees that multiple sources asserted the same claim identifier and comput
 # Stack
 
 - Python
-- SQLite
+- PostgreSQL
 
 ## Current Status of Verity
 (As of June 22, 2026)
