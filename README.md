@@ -29,7 +29,7 @@ Sources and claims form a bipartite graph. Each edge represents a source asserti
 </p>
 The idea is to see whether credibility can emerge naturally through repeated movement across the graph.
 
-One way you can think of it is a verifier traveling through the network at random: starting on one source then moving to the set of claims it asserts, then from those claims to its other supporting sources, over and over again. Sources that consistently connect to credible claims will get revisited more often. Claims supported by credible sources also get revisited more often.
+Computing credibility is iterative and propagates over the graph. At each iteration step, each source distributes its credibility across all claims it asserts, and each claim in turn redistributes its support that it accumulated back to the asserting sources. The iterations repeat until the credibility vector reaches a steady state fixed point. Agreement weighting influences how much support each assertion contributes.
 
 # Content-Agnostic Core
 
