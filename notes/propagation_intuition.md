@@ -1,4 +1,4 @@
-# Random Walk Notes
+# Propagation Notes
 
 Can credibility emerge naturally from repeated movement across a graph of sources and claims?
 
