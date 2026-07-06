@@ -4,7 +4,7 @@ Can credibility emerge naturally from repeated propagation across a graph of sou
 
 Suppose a source asserts one or more claims. Those claims are also asserted by other sources, which then assert other claims, and so on. These "assertions" create a connection between a source and a claim.
 
-Can stable credibility be assigned purely from the graph structure alone?
+Can stable credibility be assigned purely from the graph structure?
 
 The structure can be represented as a bipartite graph:
 
@@ -39,6 +39,6 @@ $$
 
 where claims reinforce sources and sources reinforce claims.
 
-A problem with this though is that propagation can get trapped (e.g., "Claim Echo Loops" where sources copy each other's claims) or hit dead ends (e.g., a claim appears on a single obscure source).
+A challenge with iterative propagation, however, is that densely connected regions of the graph (e.g., "Claim Echo Loops" where sources copy each other) may carry greater influence than less densely connected regions. Similarly, claims appearing on a single source receive little or no reinforcement.
 
 It is also important to note that agreement clearly does not imply independence. As said before, many sources may be copying, or, "scraping" the same misleading upstream information which results in the graph appearing highly confident despite a lack of independent verification.
