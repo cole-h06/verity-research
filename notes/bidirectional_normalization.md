@@ -48,44 +48,6 @@ where:
 
 The idea is simple: if many sources contribute to the same claim, we average that support instead of allowing it to accumulate indefinitely.
 
-## Current graph
-
-* 24 sources
-
-* 12,684 claims
-
-* 13,860 assertions
-
-![Graph summary](../images/exp5_graph_summary.png)
-
-*Current graph statistics used in Experiment 5.*
-
-Average sources per claim:
-
-$$
-1.09
-$$
-
-Average sources per product:
-
-$$
-2.02
-$$
-
-Products by number of sources:
-
-* 155 products with 1 source
-
-* 77 products with 2 sources
-
-* 56 products with 3 sources
-
-* 29 products with 4 sources
-
-* 13 products with 5 sources
-
-* 2 products with 6 sources
-
 ## Results
 
 ![Uniform initialization](../images/exp5_uniform_start.png)
