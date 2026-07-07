@@ -50,51 +50,9 @@ The idea is simple: if many sources contribute to the same claim, we average tha
 
 ## Results
 
-![Uniform initialization](../images/exp5_uniform_start.png)
+The updated propagation algorithm still converges to a stable fixed point whether the initialization was uniform or random.
 
-*Early iterations under uniform initialization.*
-
-Both initialization schemes converged:
-
-* Uniform initialization: 81 iterations
-
-![Uniform convergence](../images/exp5_uniform_convergence.png)
-
-*Uniform initialization converged after 81 iterations.*
-
-* Random initialization: 90 iterations
-
-![Random initialization](../images/exp5_random_start.png)
-
-*Early iterations under random initialization.*
-
-![Random convergence](../images/exp5_random_convergence.png)
-
-*Random initialization converged after 90 iterations.*
-
-Maximum difference between final solutions:
-
-$$
-4.44 \times 10^{-8}
-$$
-
-![Solution difference](../images/exp5_solution_difference.png)
-
-*The final solutions from uniform and random initialization differed by less than 4.44 × 10^-8.*
-
-The resulting rankings were evidently more balanced than in previous experiments.
-
-Top sources:
-
-1. bestbuy.com - 0.328
-2. amazon.com - 0.231
-3. target.com - 0.120
-4. microcenter.com - 0.097
-5. bhphotovideo.com - 0.084
-
-![Final rankings](../images/exp5_final_rankings.png)
-
-*Bidirectional normalization produced much more balanced source rankings than previous experiments.*
+Normalizing the claim support based on the number of supporting sources results in more balanced source credibility scores than normalizing source scores only.
 
 ## Current observations
 
