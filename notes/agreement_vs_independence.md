@@ -1,6 +1,6 @@
-# Experiment 6 - Unique Claim Collapse
+# Unique Claim Collapse
 
-Date: June 16, 2026
+June 16, 2026
 
 Something odd happened with the final source credibility rankings. Several sources ended up having zero credibility for them to merge.
 
