@@ -1,6 +1,6 @@
 # server.py
 #
-# Experimental MCP interface for Verity.
+# Experimental MCP server for Verity.
 #
 # The goal is to expose credibility inference to AI agents.
 
