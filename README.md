@@ -79,7 +79,7 @@ Current research focuses on modeling source dependencies to ensure that copied i
 
 ## AI Integration
 
-Verity explores graph-based source credibility inference as a foundation for autonomous AI systems.
+Verity explores how graph-based source credibility inference can become accessible to autonomous AI systems.
 
 Modern AI agents are capable of retrieving vast amounts of information at scale, but still lack a native mechanism for reasoning about the credibility of information. This becomes problematic as these agents become integrated into everyday decision-making and act on information on behalf of users.
 
