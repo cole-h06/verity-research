@@ -22,6 +22,10 @@ In that case, the information asserted by Source B should typically be more comp
 
 This directional asymmetry of the relationship could, perhaps, be used to infer the dependency that does not require introducing explicit citation or metadata.
 
+![Example graph](../../images/source_dependency_example.png)
+
+*Illustrative source-claim graph used to reason about source dependencies.*
+
 ## Thought Experiments
 
 First, let's begin by testing the ability of directional inclusion asymmetry to distinguish source dependencies from independent agreement based only on the graph structure. There are a couple different cases of how it could play out:
