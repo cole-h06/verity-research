@@ -36,7 +36,7 @@ Verity does not interpret the strings or meaning of claims. The current implemen
 
 Verity operates purely on graph structure, receiving only source identifiers, claim identifiers, and the assertion relationships between them. This means the graph has already been parsed, normalized, deduplicated, canonicalized, and otherwise pre-processed before it is ingested by Verity.
 
-For instance, a client application could identify that the following as equivalent assertions of one claim:
+For instance, a client application could identify the following as equivalent assertions of one claim:
 
 ```text
 Product specifications:
