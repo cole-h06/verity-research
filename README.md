@@ -75,7 +75,7 @@ Currently present in the repository:
 - Graph structure example
 - Sketches of initial design
 
-Current research focuses on modeling source dependencies to ensure that copied information contributes less evidence than independent agreement.
+Current research focuses on [modeling source dependencies](paper/sections/source_dependencies.md) to ensure that copied information contributes less evidence than independent agreement.
 
 ## AI Integration
 
