@@ -1,6 +1,6 @@
 # Project Verity
 
-A credibility inference system for networks of conflicting claims. I'm building Verity to see if the relationship between sources and claims can be modeled as a graph to estimate the credibility of every source and every claim it asserts.
+A credibility inference system for networks of conflicting claims. Verity models the relationship between sources and claims as a graph to estimate the credibility of every source and claim.
 
 # Problem
 
@@ -28,7 +28,7 @@ Sources and claims form a bipartite graph. Each edge represents a source asserti
   <em>An animation of credibility propagation running on a small network of sources and claims. Node size represents inferred credibility, while edges represent assertions.</em>
 </p>
 
-Credibility is computed iteratively across the graph. At each iteration step, each source distributes its credibility across all claims it asserts, and each claim in turn redistributes its support that it accumulated back to the asserting sources. The iterations repeat until the credibility vector reaches a steady state fixed point. Agreement weighting influences how much support each assertion contributes.
+Credibility is computed iteratively across the graph. At each iteration step, each source distributes its credibility across all claims it asserts, and each claim in turn redistributes its support that it accumulated back to the asserting sources. The iterations repeat until the credibility vector reaches a fixed point. Agreement weighting influences how much support each assertion contributes.
 
 # Content-Agnostic Core
 
@@ -65,7 +65,7 @@ Medical knowledge:
   
 ## Current Status of Verity
 
-Verity is an active research project being developed that aims to investigate whether source credibility can be inferred solely based on graph structure.
+Verity is an active research project exploring whether source credibility can be inferred solely based on graph structure.
 
 Currently present in the repository:
 
@@ -77,7 +77,7 @@ Currently present in the repository:
 
 Current area of research focuses on modeling source dependencies to ensure that copied information contributes less evidence than independent agreement.
 
-## Implementation
+## AI Integration
 
 Verity is researching graph-based source credibility inference as the foundation for autonomous AI systems.
 
