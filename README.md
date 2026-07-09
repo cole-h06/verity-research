@@ -75,7 +75,7 @@ Feel free to explore the repo contents:
 - Graph structure example
 - Sketches of initial design
 
-Main area of research currently focuses on [modeling source dependencies](research/source_dependencies.md) to ensure that copied information contributes less evidence than independent agreement.
+Main area of research currently is [modeling source dependencies](research/source_dependencies.md) to ensure that copied information contributes less evidence than independent agreement.
 
 ## AI Integration
 
