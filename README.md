@@ -67,10 +67,10 @@ Medical knowledge:
 
 Verity is an active research project exploring how source credibility can be inferred solely from graph structure.
 
-Currently present in the repository:
+Feel free to check out the contents currently present in this repository:
 
-- Credibility propagation algorithm reference implementation
-- Research paper with figures
+- Credibility propagation algorithm + reference implementation
+- Research paper draft with figures
 - Experimental MCP interface
 - Graph structure example
 - Sketches of initial design
@@ -81,6 +81,6 @@ Current research focuses on [modeling source dependencies](paper/sections/source
 
 Verity explores how graph-based source credibility inference can become accessible to autonomous AI systems.
 
-Modern AI agents are capable of retrieving vast amounts of information at scale, but still lack a native mechanism for reasoning about the credibility of information. This becomes problematic as these agents become integrated into everyday decision-making and act on information on behalf of users.
+Modern AI agents are capable of retrieving vast amounts of information at scale, but still lack a native mechanism for reasoning about the underlying credibility of information. This becomes problematic as these agents become integrated into everyday decision making and act on information on behalf of users.
 
 The goal is to expose the Verity inference engine through an open-source [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server so that AI agents can incorporate credibility inference directly into their reasoning process.
