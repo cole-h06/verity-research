@@ -4,7 +4,7 @@ A graph-based credibility inference system for networks of conflicting claims. V
 
 # Problem
 
-As AI systems, such as large language models (LLMs) and autonomous agents, reason and execute complex tasks across digital environments using information collected from many sources, evaluating the credibility of this information becomes highly important.
+As AI systems, from foundational large language models (LLMs) to fully autonomous agents, reason and execute complex tasks across digital environments using information collected from many sources, evaluating the credibility of this information becomes highly important.
 
 # Research Challenge
 
