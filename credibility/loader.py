@@ -118,7 +118,7 @@ def load_agreement_weights(folder):
         for row in reader:
 
             claim_lookup[
-                int(row["id"])
+                int(row["claim_id"])
             ] = (
                 row["product_id"],
                 row["attribute"]
