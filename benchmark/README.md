@@ -8,6 +8,25 @@ With this benchmark, you can experiment with:
 - Agreement weighting
 - Source dependency modeling
 
+## Installation
+
+Clone the repository and install the project dependencies.
+
+```bash
+git clone https://github.com/cole-h06/Verity.git
+cd Verity
+
+pip install -r requirements.txt
+```
+
+## Running the benchmark
+
+From the project root, run:
+
+```bash
+python run_benchmark.py
+```
+
 ## Tables
 
 - `sources.csv` - source identifiers
