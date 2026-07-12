@@ -62,18 +62,19 @@ Enterprise knowledge:
 
 - Python
 - PostgreSQL
+
+# Repository
+
+- `benchmark/` — Reproducible benchmark dataset
+- `credibility/` — Credibility inference engine
+- `experiments/` — Experimental algorithms and research prototypes
+- `mcp/` — Experimental MCP server
+- `paper/` — Research paper
+- `research/` — Research notes
   
 # Current Status
 
 Verity is an active research project focused on evaluating source credibility based on the graph structure of an information network.
-
-Repository contents currently include:
-
-- Credibility propagation reference implementation
-- Reproducible benchmark dataset
-- Research paper draft with figures
-- Experimental MCP interface
-- Graph structure example
 
 Main area of research currently is [modeling source dependencies](research/source_dependencies.md) to ensure that copied information contributes less evidence than independent agreement.
 
