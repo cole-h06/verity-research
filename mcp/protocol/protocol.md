@@ -17,7 +17,7 @@ This document uses the following terms:
 - Assertion: The relationship between a source and a claim.
 - Credibility Graph: A bipartite graph composed of sources, claims, and assertions.
 - Client: Software that constructs and submits graph updates.
-- Verity Deployment: A self-hosted or cloud-hosted implementation of the Verity inference engine.
+- Verity Deployment: A self-hosted or cloud-hosted implementation of the Verity Protocol.
 
 ## 3. Design Goals
 
