@@ -14,40 +14,40 @@
 - Inference Engine
 - Persistence Layer
 
-## 5. End-to-End Workflow
+## 4. End-to-End Workflow
 - All steps involved from retrieval to credibility response.
 
-## 6. Graph Workflow
+## 5. Graph Workflow
 - Graph construction
 - Graph evolution
 - Snapshotting
 - Recomputation
 
-## 7. Deployment Options
+## 6. Deployment Options
 - Self-hosting
 - Cloud-based deployment
 
-## 8. Trust Boundary
+## 7. Trust Boundary
 - Data that crosses boundary.
 - Data that is not exposed to Verity.
 
-## 9. Persistent Storage Model
+## 8. Persistent Storage Model
 - Graph storage
 - Identifiers
 - Linkage tokens
 - Snapshots
 
-## 10. Inference Workflow
+## 9. Inference Workflow
 - Graph updates
 - Background recomputation
 - Propagation
 - Convergence
 - Score publication
 
-## 11. Failure Recovery
+## 10. Failure Recovery
 - Incremental computation
 - Parallel inference
 - Horizontal scaling
 
-## 12. Scalability
+## 11. Scalability
 - Incremental
