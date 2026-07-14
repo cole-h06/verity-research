@@ -89,4 +89,5 @@ A conforming Verity Protocol guarantees the following:
 ## 7. Conformance
 
 An implementation conforms to the Verity Protocol if and only if it adheres to all of the requirements defined in this document.
+
 The Verity inference engine may be updated over time to improve the inference algorithms, provided these updates maintain the guarantees listed in section 6.
