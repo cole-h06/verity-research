@@ -109,7 +109,7 @@ confluence:page:184920
 Input
 
 ```text
-the documentation
+internal-wiki
 ```
 
 Result
