@@ -282,8 +282,6 @@ Unit normalization is outside the scope of this specification.
 
 Clients are responsible for converting measurements into deterministic units before invoking the Verity SDK.
 
-### 5.5 Examples
-
 ## 6. Assertion Construction
 
 ### 6.1 Source
