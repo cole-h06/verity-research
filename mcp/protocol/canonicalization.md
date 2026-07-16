@@ -136,7 +136,7 @@ The SDK MUST:
 - Preserve the semantic identity provided by the client.
 - Normalize Unicode.
 - Trim surrounding whitespace.
-- Lowercase the entities if the identifier namespace is case-insensitive.
+- Lowercase the entities when the identifier namespace is case-insensitive.
 - Reject ambiguous entity identifiers.
 
 Examples:
@@ -231,7 +231,7 @@ The SDK MUST:
 
 - Normalize boolean values.
 - Normalize numeric representations.
-- Remove surrounding whitespaces for string values.
+- Trim surrounding whitespaces for string values.
 - Preserve the semantic meaning of the string value.
 
 Examples:
@@ -356,7 +356,7 @@ Assertions MUST reference canonical sources and canonical claims.
 
 Prior to generating linkage tokens, canonical sources, claims, and assertions MUST be serialized into deterministic JSON using the JSON Canonicalization Scheme as described in RFC 8785.
 
-The serial representation MUST be consistent across compliant implementations.
+The serialized representation MUST be consistent across compliant implementations.
 
 ### 7.1 Canonical Source
 
