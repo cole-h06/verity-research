@@ -288,11 +288,71 @@ Clients are responsible for converting measurements into deterministic units bef
 
 ### 6.1 Source
 
+Each assertion MUST reference exactly one canonical source.
+
+The source MUST satisfy the requirements specified in Section 4.
+
 ### 6.2 Claim
+
+Each assertion MUST reference exactly one canonical claim.
+
+The claim MUST satisfy the requirements specified in Section 5.
 
 ### 6.3 Assertion
 
-### 6.4 Examples
+An assertion refers to the relationship between one canonical source and one canonical claim.
+
+The SDK MUST:
+
+- Construct assertions using only canonical sources and canonical claims.
+- Preserve the direction of the relationship from source to claim.
+- Reject assertions that include non-canonical sources or claims.
+- Reject duplicate assertions within the submitted graph.
+
+Examples:
+
+```text
+Source:
+docs.anthropic.com
+
+Claim:
+(messages_api, supports_streaming, true)
+
+Assertion:
+docs.anthropic.com -> (messages_api, supports_streaming, true)
+```
+
+---
+
+```text
+Source:
+docs.anthropic.com
+
+Claim:
+(messages_api, supports_streaming, true)
+
+Result:
+Rejected
+
+Reason:
+Duplicate assertion within the submitted graph.
+```
+
+---
+
+```text
+Source:
+HTTPS://Docs.Anthropic.com/
+
+Claim:
+(Messages API, Supports Streaming, TRUE)
+
+Result:
+Rejected
+
+Reason:
+Assertions MUST reference canonical sources and canonical claims.
+```
 
 ## 7. Canonical Forms
 
