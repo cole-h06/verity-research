@@ -1,8 +1,8 @@
 # Verity Architecture
 
-This document provides a high-level overview and defines fundamental architectural components and their interactions that make up the Verity architecture.
+This document provides a high-level overview of the Verity architecture and defines its fundamental components and their interactions.
 
-To see the related specification details, visit:
+To see related specification, visit:
 
 - **[`protocol.md`](protocol.md)** — the communication contract between clients and Verity deployments. Defines the JSON-RPC protocol and request & response formats.
 - **[`canonicalization.md`](canonicalization.md)** — deterministic normalization rules. Specifies how semantically equivalent assertions produce the same graph representation before inference.
@@ -49,7 +49,7 @@ A Verity deployment persists a credibility graph as new assertions are received.
 
 ### 3.1 Verity SDK
 
-The Verity SDK exposes the Verity API for application use. The SDK serves as the primary integration point between applications and a Verity deployment.
+The SDK serves as the primary integration point between applications and a Verity deployment.
 
 ### 3.2 Verity Deployment
 
@@ -65,7 +65,7 @@ This section specifies how data flows through a Verity deployment, from the poin
 
 ### 4.1 Structured Data Pipeline
 
-A core principle of Verity is it does not analyze raw data. Applications collect and organize information from their own data sources. Some examples of data sources could include REST APIs, databases such as SQL, documents, spreadsheets, knowledge bases, MCP tools, or even the outputs of AI agents. The application should intrepret the data and convert it to structured assertions before interacting with Verity.
+A core principle of Verity is it does not analyze raw data. Applications collect and organize information from their own data sources. Some examples of data sources could include REST APIs, databases such as SQL, documents, spreadsheets, knowledge bases, MCP tools, or even the outputs of AI agents. The application should interpret the data and convert it to structured assertions before interacting with Verity.
 
 The method used to perform semantic extraction is outside the scope of Verity.
 
@@ -75,7 +75,7 @@ The Verity SDK applies deterministic canonicalization to structured assertions b
 
 ### 4.3 Linkage Token Generation
 
-The SDK generates privacy-preserving linkage tokens from the canonicalized graph update. The linkage protocol is defined separately from the system architecture.
+The SDK generates privacy-preserving linkage tokens from the canonicalized graph update. The method used to generate linkage tokens is defined separately from the system architecture.
 
 ### 4.4 Graph Update Construction
 
@@ -87,7 +87,7 @@ The graph update is transmitted to a Verity deployment using a supported protoco
 
 ### 4.6 Credibility Inference
 
-After submission, the deployment resolves the linkage tokens and updates the persistent credibiliy graph, then executes the configured inference algorithm to compute structural credibility.
+After submission, the deployment resolves the linkage tokens and updates the persistent credibility graph, then executes the configured inference algorithm to compute structural credibility.
 
 ### 4.7 Credibility Response
 
@@ -121,4 +121,4 @@ Verity deployments may be self-hosted or cloud-hosted. Every deployment implemen
 
 ### 6.2 Trust Boundary
 
-Applications must perform semantic extraction and canonicalization before interacting with Verity. Verity operates only on protocol-compliant graph updates and does not interpret the underlying content. This separation establishes the trust boundary between application-specific processing and structural credibility inference.
+Applications  perform semantic extraction and canonicalization before interacting with Verity. Verity operates only on protocol-compliant graph updates and does not interpret the underlying content. This separation establishes the trust boundary between application-specific processing and structural credibility inference.
