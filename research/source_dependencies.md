@@ -196,6 +196,28 @@ This experiment does not mean rarity-weighted overlap is a measure of source dep
 
 Rarity-weighted overlap seems to be a promising candidate as part of the broader hybrid dependency model introduced earlier. Nonetheless, whether it holds up alongside other structural signals or not is an empirical question for further experiments.
 
+## Community Overlap (Experiment 3)
+
+The first two experiments centered on measuring each pair of source's structural relationship.
+
+I also wanted to figure out if an additional dependency signal could be derived from the larger graph structure that isn't pairwise connections.
+
+I constructed a weighted source graph where each edge is the number of assertions shared between two sources to test this. Then, using the Louvain algorithm, community detection was performed.
+
+### Results
+
+The algorithm divided the graph into coherent groups of related sources but preserved several strong connections between different communities.
+
+After inspecting the bridge edges, I noticed that, despite belonging to different clusters, some sources maintained substantial relationships outside their assigned community.
+
+### Observations
+
+Overall, community detection seems to not introduce any independent structural signal and just summarizes the existing overlap graph.
+
+Unlike directional inclusion asymmetry and rarity-weighted overlap, which quantify distinct properties of the relationship between two sources, community membership is derived directly from those same overlap relationships.
+
+This experiment showed that community detection does not contribute any meaningful additional information for estimating source dependencies beyond the pairwise measures already considered. Nonetheless, it was still useful and suggests that it may be more effective for graph analysis / visualization, not a core component of a dependency model.
+
 ## Open Questions
 
 - How is this best modeled mathematically / what concept fits best?
